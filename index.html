@@ -12,19 +12,72 @@
     />
     <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="javascript" href="scripts/main.js" />
+    <script rel="script" src="scripts/main.js" defer></script>
     <title>Black Jack</title>
   </head>
+  <!-- class="[ jsSelector ] [ composition ] [ utlities ] [ block ]" -->
   <body>
     <div id="skip">
       <a href="#site-main">Skip to content</a>
     </div>
     <header><nav></nav></header>
-    <main id="skip">
-      <h1></h1>
-      <article id="player"></article>
-      <article id="gameBoard"></article>
-      <article id="dealer"></article>
+    <main id="skip" class="[] [] [] []">
+      <h1>Black Jack</h1>
+      <div class="[ gameBoard ] [ flex-row ] [ height-100 ] []">
+        <article
+          class="[ player ] [ flex-col ] [ align-items_start flex-15 ] []"
+        >
+          <h2>Player Board</h2>
+          <button>Start Game</button>
+          <button>Hit</button>
+          <button>Hold</button>
+          <button>Ace Options</button>
+          <h3>Score: <span class="[ playerScore ] [] [] []">0</span></h3>
+        </article>
+        <article class="[ gameCards ] [ grid-cards   ] [ flex-70 ] []">
+          <div class="[ deck ] [ flex-col ] [ ] []">
+            <img
+              class="[] [] [ playing-card ] []"
+              src="images/card-deck-svg/1B.svg"
+              alt=""
+            />
+          </div>
+          <div class="[] [] [ grid-cards-rows ] []">
+            <div class="[ dealer-cards ] [ flex-row ] [ ] []">
+              <!-- to be done with js later here for design/css work atm -->
+              <img
+                class="[] [] [ playing-card ] []"
+                src="images/card-deck-svg/1B.svg"
+                alt=""
+              />
+              <img
+                class="[] [] [ playing-card ] []"
+                src="images/card-deck-svg/QC.svg"
+                alt=""
+              />
+            </div>
+            <div class="[ player-cards ] [ flex-row ] [ ] []">
+              <!-- to be done with js later here for design/css work atm -->
+              <img
+                class="[] [] [ playing-card ] []"
+                src="images/card-deck-svg/JD.svg"
+                alt=""
+              />
+              <img
+                class="[] [] [ playing-card ] []"
+                src="images/card-deck-svg/8S.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </article>
+        <article
+          class="[ dealer ] [ flex-col ] [ align-items_start flex-15 ] []"
+        >
+          <h2>Dealer Board</h2>
+          <h3>Score: <span class="[ dealerScore ] [] [] []">0</span></h3>
+        </article>
+      </div>
     </main>
     <footer></footer>
   </body>
