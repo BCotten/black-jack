@@ -131,6 +131,16 @@ function playerHit(shuffledDeck) {
   // allow play to hit until at 21 (they won) or over 21 (they lost) or they hold
 }
 
+function checkScore(boolean) {
+  // if player... if true
+
+
+  // if dealer... if false
+
+}
+
+
+
 // class for the player information name, card backing{s}
 
 // game class for the main game play track score, check score
