@@ -34,12 +34,6 @@
   --fw-850: 850;
   --fw-1000: 1000;
 
-  /* Colors Primary */
-  --clr-primary-blue-100: #aec6fe;
-  --clr-primary-blue-200: #5169e6;
-  --clr-primary-blue-300: #0145db;
-  --clr-primary-blue-500: #012169;
-
   /* Colors neutral */
 
   --clr-neutral-100: #ffffff;
@@ -61,6 +55,7 @@ body {
 h1,
 h2,
 h3,
+.h3,
 h4,
 h5,
 h6 {
@@ -70,13 +65,16 @@ h6 {
 
 h1 {
   font-size: var(--step-5, 3rem);
+  text-align: center;
 }
 
 h2 {
   font-size: var(--step-4, 2.5rem);
+  margin-top: 0;
 }
 
-h3 {
+h3,
+.h3 {
   font-size: var(--step-2, 1.7rem);
 }
 
@@ -104,7 +102,7 @@ p {
 .grid-cards {
   display: grid;
   gap: var(--space-l);
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 240px 1fr;
   align-items: center;
 }
 
@@ -112,10 +110,6 @@ p {
 /*
   ---- Utilities ----
 */
-
-.align-items_start {
-  align-items: start;
-}
 
 .flex-15 {
   flex: 15%;
@@ -131,12 +125,29 @@ p {
 
 
 
+.wrapper {
+  max-width: 120rem;
+  margin-inline: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+
+
 /*
   ---- Block ----
 */
 
 .playing-card {
   max-width: 15rem;
+}
+
+.button {
+  margin-inline-start: 1.25rem;
+  width: 150px;
 }
 
 /*

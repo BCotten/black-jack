@@ -20,12 +20,12 @@
     <div id="skip">
       <a href="#site-main">Skip to content</a>
     </div>
-    <header><nav></nav></header>
-    <main id="skip" class="[] [] [] []">
+    <!-- <header><nav></nav></header> -->
+    <main id="skip" class="[] [] [ height-100 wrapper ] []">
       <h1>Black Jack</h1>
-      <div class="[ gameBoard ] [ flex-row ] [ height-100 ] []">
+      <div class="[ gameBoard ] [ flex-row ] [  ] []">
         <article
-          class="[ player ] [ flex-col ] [ align-items_start flex-15 ] []"
+          class="[ player ] [ flex-col ] [ flex-15 ] []"
         >
           <h2>Player Board</h2>
           <button class="[ startBtn ] [] [] [ button ]">Start Game</button>
@@ -41,7 +41,8 @@
               alt=""
             />
           </div>
-          <div class="[] [] [ grid-cards-rows ] []">
+          <div class="[] [] [ flex-col ] []">
+            <p class="[ info ] [ ] [ h3 text-center ] [ ]">Press start game button to play!</p>
             <div class="[ dealer-cards ] [ flex-row ] [ ] []">
               <!-- to be done with js later here for design/css work atm -->
               <img
@@ -54,6 +55,16 @@
                 src="images/card-deck-svg/QC.svg"
                 alt=""
               />
+              <img
+                class="[] [] [ playing-card ] []"
+                src="images/card-deck-svg/2H.svg"
+                alt=""
+              />
+              <img
+                class="[] [] [ playing-card ] []"
+                src="images/card-deck-svg/AC.svg"
+                alt=""
+              />
             </div>
             <div class="[ player-cards ] [ flex-row ] [ ] []">
               <!-- to be done with js later here for design/css work atm -->
@@ -64,14 +75,24 @@
               />
               <img
                 class="[] [] [ playing-card ] []"
-                src="images/card-deck-svg/8S.svg"
+                src="images/card-deck-svg/6S.svg"
+                alt=""
+              />
+              <img
+                class="[] [] [ playing-card ] []"
+                src="images/card-deck-svg/4H.svg"
+                alt=""
+              />
+              <img
+                class="[] [] [ playing-card ] []"
+                src="images/card-deck-svg/AC.svg"
                 alt=""
               />
             </div>
           </div>
         </article>
         <article
-          class="[ dealer ] [ flex-col ] [ align-items_start flex-15 ] []"
+          class="[ dealer ] [ flex-col ] [ flex-15 ] []"
         >
           <h2>Dealer Board</h2>
           <h3>Score: <span class="[ dealerScore ] [] [] []">0</span></h3>

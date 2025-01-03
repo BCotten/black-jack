@@ -1,5 +1,6 @@
 import { dealerScoreIncrease } from "./scoreIncrease.js";
 import { score } from "./deck.js";
+import { shuffledDeck } from "./firstDeal.js";
 
 function checkPlayerScore() {
   if (score.playerScore > 21) {
@@ -13,7 +14,7 @@ function checkPlayerScore() {
 
 function checkDealerScore() {
   while (score.dealerScore < 17) {
-    const current = shuffledDeck.shift();
+    const current = shuffledDeck.shift(); /* shuffledDeck.shift() */
     console.log({ current });
     dealerScoreIncrease(current);
     console.log(score.dealerScore);

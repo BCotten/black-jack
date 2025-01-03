@@ -21,7 +21,11 @@ function playerHold() {
   selectors.btn.hold.addEventListener("click", () => {
     const message = checkDealerScore();
     console.log(message);
+    selectors.scoreBoard.dealer.hidden = false;
+    selectors.btn.hit.disabled = !selectors.btn.hit.disabled;
+    selectors.btn.hold.disabled = !selectors.btn.hold.disabled;
   });
+
 }
 
 export { playerHit, playerHold };

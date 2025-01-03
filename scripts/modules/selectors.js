@@ -7,6 +7,7 @@ const selectors = {
   scoreBoard: {
     player: document.querySelector(".playerScore"),
     dealer: document.querySelector(".dealerScore"),
+    info: document.querySelector(".info"),
   },
 };
 
