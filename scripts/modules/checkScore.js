@@ -17,15 +17,13 @@ function checkPlayerScore() {
 
 function checkDealerScore() {
   while (score.dealerScore < 17) {
-    const current = shuffledDeck.shift(); /* shuffledDeck.shift() */
-    console.log({ current });
+    const current = shuffledDeck.shift();
     dealerScoreIncrease(current);
     const dealerCard = document.createElement("img");
     dealerCard.src = `images/card-deck-svg/${current.suit}.svg`;
     dealerCard.alt = `A playing card with suit number of ${current.suit} and a value of ${current.value}`;
     dealerCard.className = "playing-card";
     selectors.cards.dealer.appendChild(dealerCard);
-    console.log(score.dealerScore);
   }
 
   if (score.dealerScore > 21) {

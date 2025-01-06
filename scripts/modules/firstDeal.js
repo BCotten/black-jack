@@ -2,19 +2,20 @@ import { deck } from "./deck.js";
 import shuffleDeck from "./shuffleDeck.js";
 import { dealerScoreIncrease, playerScoreIncrease } from "./scoreIncrease.js";
 import selectors from "./selectors.js";
+import { checkPlayerScore } from "./checkScore.js";
 
 const shuffledDeck = shuffleDeck(deck);
 
 function firstDeal() {
+  // clear both the background cards
   selectors.cards.dealer.innerHTML = ``;
   selectors.cards.player.innerHTML = ``;
+  // hide dealers score
   selectors.scoreBoard.dealer.hidden = true;
   const arrayEnd = shuffledDeck.length - 1;
   const secondCard = arrayEnd - 1;
   for (let i = arrayEnd; i > arrayEnd - 4; i--) {
     const current = shuffledDeck.shift();
-    console.log(`${i}: `);
-    console.log({ current });
     if (i % 2) {
       //players first and 2nd card score/placement
       playerScoreIncrease(current);
@@ -23,12 +24,8 @@ function firstDeal() {
       playerCard.alt = `A playing card with suit number of ${current.suit} and a value of ${current.value}`;
       playerCard.className = "playing-card";
       selectors.cards.player.appendChild(playerCard);
-      // place card in html
     } else {
-      console.log("HELLO ELSE");
       if (i === secondCard) {
-        console.log("HELLO SECOND CARD");
-        console.log({ arrayEnd });
         //place dealer card with background on top
         const dealerCardBg = document.createElement("img");
         dealerCardBg.src = "images/card-deck-svg/1B.svg";
@@ -44,7 +41,6 @@ function firstDeal() {
       }
       if (i === arrayEnd - 3) {
         //dealers 2nd card
-        console.log("END OF ARRAY");
         const secondDealerCard = document.createElement("img");
         secondDealerCard.src = `images/card-deck-svg/${current.suit}.svg`;
         secondDealerCard.alt = `A playing card with suit number of ${current.suit} and a value of ${current.value}`;
@@ -54,6 +50,7 @@ function firstDeal() {
       dealerScoreIncrease(current);
     }
   }
+  checkPlayerScore();
 }
 
 export { shuffledDeck, firstDeal };
