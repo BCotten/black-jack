@@ -9,6 +9,10 @@ const selectors = {
     dealer: document.querySelector(".dealerScore"),
     info: document.querySelector(".info"),
   },
+  cards: {
+    player: document.querySelector(".player-cards"),
+    dealer: document.querySelector(".dealer-cards"),
+  }
 };
 
 export default selectors;
